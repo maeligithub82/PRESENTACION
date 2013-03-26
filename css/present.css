@@ -1,7 +1,4 @@
-
 @import url("tipografia.css");
-
-
 
 html, body, #carousel, #carousel ul, #carousel li {
 	height: 100%;
@@ -14,16 +11,24 @@ img, video, object {
 	max-width:100%;
 	height: auto; 
 }
-
+p{
+	margin: 1% 0;
+}
+blockquote{
+	margin: 1% 20px 1.5% 50px;
+}
 body{
 	background:url(../img/bg_main.jpg);
 	font-family: 'Muli-Regular';
+	color: #f2f2f2;
+	font-size: 26px;
+	text-align: justify;
 }
 #carousel {
 	background:url(../img/bg_contenido.jpg);
 	overflow: hidden;
  	width:1024px;
-	height:700px;
+	height:760px;
 	margin: 0 auto;
 	-webkit-backface-visibility: hidden;
 	-webkit-transform: translate3d(0,0,0) scale3d(1,1,1);
@@ -86,16 +91,29 @@ body{
 	padding: 0;
 	margin: 0;
 	position: relative ;
-	top: 20%;
+	top: 0%;
 	text-align: right;
 	font-size: 30px;
 	color: #fff;
 }
+.inicio{
+	width: 56px;
+	height: 55px;
+	padding: 0 10px; 
+	position:relative; 
+	top: 6px;
+}
+.span{
+	float: left;
+	padding: 0 0 0 15px;
+	margin: auto 0;
+}
 .content p{
-	padding: 0 15px;
+	padding:0 15px;
 	color: #f2f2f2;
-	font-size: 22px;
-	text-align: justify;
+}
+.content .color{
+	color:#393939
 }
 .contentImg{
 	background: rgba(255,255,255,0.2); 
@@ -115,14 +133,21 @@ body{
 	font-size: 30px;
 	padding: 0;
 }
-
-.titulo_apartado
-{
+.titulo_apartado{
 	padding:170px 0 0 0;
 	font-size:90px;
 	text-align:center;
 	color:#FFF;
-	}
+}
+#carousel .content ul{
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	padding: 0 15px;
+}
+#carousel .content li{
+	font-size: 24px;
+	float:none;
+}
 
 Swipe...
 	...or drag...
@@ -133,11 +158,9 @@ Swipe...
         #carousel li.pane5 { background: #cd74e6; }
 		#carousel li.pane6 { background: #9fe1e7; }
 		#carousel li.pane7 { background: #FC6; }
-		
-		
-
 
 @media only screen and (max-width: 700px){
+	
 	#carousel {
 		width:auto;
 		height: 100%;
@@ -147,21 +170,15 @@ Swipe...
 		position: absolute;
 		top: 10%;
 	}
-	.barra span{
-		position: relative ;
-		top: 20%;
-		left: 30%;
-	}
 	.content p{
 		padding: 0 12px;
-		font-size: 20px;
 	}
 	.contentImg{
 		width: 100%;
 		height: auto;
 	}
-	.barra p{
-		font-size: 150%;
+	.barra p, .subarra p{
+		font-size: 100%;
 	}
 
 }
