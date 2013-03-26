@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="../../../../css/style.css" rel="stylesheet" type="text/css"/>
+<link href="../../../../css/tablet.css" rel="stylesheet" type="text/css"/>
+
+<title></title>
+</head>
+
+<body onLoad="inicia();">
+<div id="cont_pages">
+<div><img src="../../img/img_bloque1/titulo_ecuaciones_dos_inco.png" width="655" height="142"></div>
+<div>
+<img src="../../../matematicas2/img/img_bloque1/fig_num.png" width="660" height="436" border="0" usemap="#Map">
+<map name="Map" id="Map">
+  <area shape="rect" coords="422,212,602,331" href="1er-robot/index.html">
+</map>
+</div>
+
+</div>
+
+
+</body>
+<script>
+       function inicia(){
+          var xIni;
+          var yIni;
+          var canvas = document.getElementById('cont_pages');
+          canvas.addEventListener('touchstart', function(e){
+              if (e.targetTouches.length == 1) {
+          var touch = e.targetTouches[0];
+          xIni = touch.pageX;
+          yIni = touch.pageY;
+       }
+          }, false);
+          
+          canvas.addEventListener('touchmove', function(e){
+              if (e.targetTouches.length == 1) {
+          var touch = e.targetTouches[0];
+          if((touch.pageX>xIni+20) && (touch.pageY> yIni-5) && (touch.pageY<yIni+5)){
+             /*alert("el swipe se genera hacia la izquierda");*/
+    	 location.href='../../../../index.html';
+          }
+          
+          if((touch.pageX<xIni-20) && (touch.pageY> yIni-5) && (touch.pageY<yIni+5)){
+             /*alert("el swipe se genera hacia la derecha");*/
+	location.href='1er-robot/index.html';
+          }
+       }
+          }, false);
+          
+                     
+       }
+    </script>
+
+</html>

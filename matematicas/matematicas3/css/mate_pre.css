@@ -1,0 +1,139 @@
+@import url("../../../css/tipografia.css");
+
+
+
+html, body, #carousel, #carousel ul, #carousel li {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+ 	position: relative;
+}
+
+img, video, object { 
+	max-width:100%;
+	height: auto; 
+}
+
+body{
+	background:url(../../../img/bg_main.jpg);
+	font-family: 'Muli-Regular';
+}
+
+.imgnext
+{
+	width:42px;
+	height:35px;
+	vertical-align:middle;
+	background:url(../ejercicios/img/btn_sig.png);
+	background-repeat:no-repeat;
+	}
+
+.imgprev
+{
+	width:42px;
+	height:35px;
+	vertical-align:middle;
+	background:url(../ejercicios/img/btn_prev.png);
+	background-repeat:no-repeat;
+	}
+
+
+a.prev, a.next, a.play, a.pause {
+	
+	width: 51px;
+	height: 50px;
+	display: block;
+	position: absolute;
+}
+
+a.prev, a.next {
+	top: 556px;
+}
+.list_carousel a.prev, .list_carousel a.next {
+	top: 30px;
+}
+
+a.prev {
+	left: 861px;
+}
+
+
+
+#carousel {
+	background:url(../../../img/bg_contenido.jpg);
+	overflow: hidden;
+ 	width:1024px;
+	height:700px;
+	margin: 0 auto;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: translate3d(0,0,0) scale3d(1,1,1);
+ 	-webkit-transform-style: preserve-3d;
+}
+#carousel ul.animate {
+	-webkit-transition: all .3s;
+ 	-moz-transition: all .3s;
+ 	-o-transition: all .3s;
+ 	transition: all .3s;
+}
+#carousel ul {
+	transform: translate3d(0%,0,0) scale3d(1,1,1);
+	-o-transform: translate3d(0%,0,0) scale3d(1,1,1);
+	-ms-transform: translate3d(0%,0,0) scale3d(1,1,1);
+	-moz-transform: translate3d(0%,0,0) scale3d(1,1,1);
+	-webkit-transform: translate3d(0%,0,0) scale3d(1,1,1);
+	overflow: hidden;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform-style: preserve-3d;
+}
+#carousel ul {
+	-webkit-box-shadow: 0 0 20px rgba(0,0,0,.2);
+	box-shadow: 0 0 20px rgba(0,0,0,.2);
+	position: relative;
+}
+#carousel li {
+	float: left;
+	overflow: hidden;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transform: translate3d(0,0,0);
+}
+
+
+#cont_pages1{
+	width:900px;
+	height:760px;
+	margin:0 auto;
+	text-align:center;
+}
+
+		
+		
+
+
+@media only screen and (max-width: 700px){
+	#carousel {
+		width:auto;
+		height: 100%;
+	}
+	.tit{
+		font-size: 40px;
+		position: absolute;
+		top: 10%;
+	}
+	.barra span{
+		position: relative ;
+		top: 20%;
+		left: 30%;
+	}
+	.content p{
+		padding: 0 12px;
+		font-size: 20px;
+	}
+	.contentImg{
+		width: 100%;
+		height: auto;
+	}
+	.barra p{
+		font-size: 150%;
+	}
+
+}
